@@ -17,8 +17,11 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-
+// The function itself uses the code variable internal and before it is invoked, it does not see the variable. However because the function is being invoked elsewhere, the scope changes and it sees the variable :D
 
 /* Task 2: Counter */
+const summation = function (number){
 
+return `${number * (number+1)/ 2}`
+}
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
