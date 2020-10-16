@@ -5,7 +5,24 @@
 /* == Step 1: Base Constructor ==
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
+class CuboidMaker {
+  constructor(stuff){
+    this.length = stuff.length;
+    this.width = stuff.width;
+    this.height = stuff.height;
+  }
+  volume(){
+    return `${this.length * this.width * this.height}`;
+  }
+  surfaceArea(){
+    return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`
+  }
+}
+let cuboid = new CuboidMaker({length: 4, width: 5, height: 5});
 
+
+// OH! I was supposed to do this as a prototype... :c
+// All I'd need to do is replace volume and surface area with CuboidMaker.prototype.volume and CuboidMaker.prototype.surfaceArea. Right?
 
 /* == Step 2: Volume Method ==
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
